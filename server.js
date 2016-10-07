@@ -28,7 +28,7 @@ var htmltemplate=`
                <head>
                 <title>
             
-                 $(title)
+                 ${title}
                  </title>
             
             <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -43,18 +43,19 @@ var htmltemplate=`
             <hr/>
             <h3>
             
-            $(heading)
+            ${heading}
             
             </h3>
             <div>
-            $(date)
+            ${date}
             </div>
-            $(content)
+            ${content}
             </div>
             </body>
             
             </html>
-`;
+            `
+;
  return htmltemplate;
  }  
  
