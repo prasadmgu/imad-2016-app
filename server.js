@@ -4,7 +4,9 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articleone= {
+
+var articles={
+ 'articleone': {
     title: 'Article One | Prasad K G',
     heading: 'Article-One',
     date:'October,4',
@@ -16,9 +18,9 @@ var articleone= {
      <p>
           This is a test file for article one created by Prasad K G This is a test file for article one created by Prasad K GThis is a test file for article one created by Prasad K GThis is a test file for article one created by Prasad K GThis is a test file for article one created by Prasad K GThis is a test file for article one created by Prasad K GThis is a test file for article one created by Prasad K G.This is a test file for article one created by Prasad K G
       </p>  `
-};
+},
 
-var articletwo= {
+' articletwo': {
     title: 'Article Two | Prasad K G',
     heading: 'Article-two',
     date:'October,5',
@@ -30,9 +32,9 @@ var articletwo= {
      <p>
           T This is a test file for article two created by Prasad K G
       </p>  `
-};
+},
 
-var articlethree= {
+ 'articlethree': {
     title: 'Article Three | Prasad K G',
     heading: 'Article-three',
     date:'October,6',
@@ -44,13 +46,10 @@ var articlethree= {
      <p>
           T This is a test file for article three created by Prasad K G
       </p>  `
+}
 };
 
-var articles={
-    'article-one':{ },
-   ' article-two':{ },
-    'article-three': { }
-};
+ 
 function createTemplate(data){
     var title=data.title;
     var heading= data.heading;
