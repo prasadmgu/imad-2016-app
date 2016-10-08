@@ -17,6 +17,40 @@ var articleone= {
           This is a test file for article one created by Prasad K G This is a test file for article one created by Prasad K GThis is a test file for article one created by Prasad K GThis is a test file for article one created by Prasad K GThis is a test file for article one created by Prasad K GThis is a test file for article one created by Prasad K GThis is a test file for article one created by Prasad K G.This is a test file for article one created by Prasad K G
       </p>  `
 };
+
+var articletwo= {
+    title: 'Article Two | Prasad K G',
+    heading: 'Article-two',
+    date:'October,5',
+    content:`
+<p>
+           This is a test file for article one created by Prasad K Gis a test file for article two created by Prasad K G
+      </p>  
+    
+     <p>
+          T This is a test file for article two created by Prasad K G
+      </p>  `
+};
+
+var articlethree= {
+    title: 'Article Three | Prasad K G',
+    heading: 'Article-three',
+    date:'October,6',
+    content:`
+<p>
+           This is a test file for article three  created by Prasad K Gis a test file for article threecreated by Prasad K G
+      </p>  
+    
+     <p>
+          T This is a test file for article three created by Prasad K G
+      </p>  `
+};
+
+var articles={
+    'article-one':{ },
+   ' article-two':{ },
+    'article-three': { }
+};
 function createTemplate(data){
     var title=data.title;
     var heading= data.heading;
@@ -64,8 +98,9 @@ var htmltemplate=`
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one',function(req, res){
-res.send(createTemplate(articleone));   
+app.get('/:articleName',function(req, res){
+    var articleName=req.params.articleName;
+res.send(createTemplate(articles[aticleName]));   
 });
 app.get('/article-two',function(req, res){
 res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
