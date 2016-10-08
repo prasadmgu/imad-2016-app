@@ -21,7 +21,7 @@ var articles={
       </p>  `
 },
 
-' article-two': {
+'article-two': {
     title: 'Article Two | Prasad K G',
     heading: 'Article-two',
     date:'October,5',
